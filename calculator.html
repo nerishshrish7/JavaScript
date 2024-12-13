@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 95vh;
+            width: 40vw;
+            background: gray;
+            margin-top: 1%;
+            margin-left: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .content{
+            height: 15vh;
+            width: 35vw;
+            background: lightgrey;
+            display: flex;
+            align-items: center;
+            font-size: 35px;
+            border-radius: 5px;
+            border: none;
+            text-align: right ;
+        }
+        .number{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 2%;
+        }
+        .number input{
+            height: 12vh;
+            width: 8vw;
+            margin-top: 10px;
+        }
+        .nothing{
+            font-size: 30px;
+        }
+        .hero{
+            font-size: 30px;
+            background: orange;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" class="content" id="content">
+        <div class="number">
+            <input type="button" value="OFF" onclick="show(' ')" class="nothing">
+            <input type="button" value="AC" onclick="display('0')" class="nothing">
+            <input type="button" value="C" onclick="back()" class="nothing">
+            <input type="button" value="ON" onclick="display('0')" class="nothing">
+            <input type="button" onclick="check('7')" value="7" class="nothing">
+            <input type="button" onclick="check('8')" value="8" class="nothing">
+            <input type="button" onclick="check('9')" value="9" class="nothing">
+            <input type="button" onclick="check('/')" value="÷" class="nothing">
+            <input type="button" onclick="check('4')" value="4" class="nothing">
+            <input type="button" onclick="check('5')" value="5" class="nothing">
+            <input type="button" onclick="check('6')" value="6" class="nothing">
+            <input type="button" onclick="check('*')" value="×" class="nothing">
+            <input type="button" onclick="check('1')" value="1" class="nothing">
+            <input type="button" onclick="check('2')" value="2" class="nothing">
+            <input type="button" onclick="check('3')" value="3" class="nothing">
+            <input type="button" onclick="check('-')" value="-" class="nothing">
+            <input type="button" onclick="check('0')" value="0" class="nothing">
+            <input type="button" onclick="check('.')" value="." class="nothing">
+            <input type="button" onclick="check('+')" value="+" class="nothing">
+            <input type="button" onclick="total()" value="=" class="hero">
+        </div>
+    </div>
+    <script>
+        var Displayw=document.getElementById('content');
+        var a=0;
+        value2=0;
+        function check(val){
+            Displayw.value+=val;
+        }
+        function display(value1){
+            Displayw.value=value1;
+        }
+        function total(){
+            parseFloat(Displayw.value);
+            Displayw.value=eval(Displayw.value);
+        }
+        function show(value2){
+            Displayw.value=value2;
+        }
+        function back(){
+            Displayw.value=Displayw.value.slice(0,-1);
+        }
+    </script>
+</body>
+</html>

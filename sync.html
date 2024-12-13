@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function foo() {
+  const result1 = await new Promise((resolve) =>
+    setTimeout(() => resolve("1")),
+  );
+  const result2 = await new Promise((resolve) =>
+    setTimeout(() => resolve("2")),
+  );
+}
+foo();
+    </script>
+</body>
+</html>

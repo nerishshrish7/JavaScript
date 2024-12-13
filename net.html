@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      display: flex;
+      align-items: center;
+      margin-top: 10%;
+      flex-direction: column;
+    }
+    #run{
+      height: 20vh;
+      width: 20vw;
+      background: bisque;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button{
+      height: 5vh;
+      width: 5vw;
+      margin-top: 5vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="run"></div>
+  <button onclick="run()">Click</button>
+
+  <script>
+    function run(){
+      if (navigator.onLine) {
+        document.getElementById('run').innerHTML="You're Online";
+      } 
+      else {
+        document.getElementById('run').innerHTML="You're Offline";
+      }
+    }
+  </script>
+</body>
+</html>

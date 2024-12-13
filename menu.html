@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            height: 10vh;
+            width: 100%;
+            background: pink;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20%;
+        }
+        .logo{
+            height: 10vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3vw;    
+        }
+        #sub-nav{
+            height: 10vh;
+            width: 50vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 1.5vw;    
+            gap: 3%;
+            font-family: 'Poppins',sans-serif;
+        }
+        .home{
+            height: 10vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        .course{
+            height: 10vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .page{
+            height: 10vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+        }
+        .contact{
+            height: 10vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .event{
+            height: 10vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .home-2{
+            height: 10vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        .course-2{
+            height: 10vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .page-2{
+            height: 10vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+        }
+        .contact-2{
+            height: 10vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .event-2{
+            height: 10vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon{
+            height: 10vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        #sub-nav-2{
+            height: 40vh;
+            width: 0vw;
+            color:rgb(32, 32, 32);
+            background-clip: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            border-top: 1px solid white;
+        }
+        @media (max-width:600px){
+            .navbar{
+                display: flex;
+                flex-direction: row;
+                gap: 50%;
+                justify-content: center;
+                align-items: center;
+            }
+            #sub-nav{
+                display: none;
+            }
+            
+            .icon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @media(min-width:605px){
+            #sub-nav-2{
+                display: none;
+            }}
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <p>LOGO</p>
+        </div>
+        <div id="sub-nav">
+            <div class="home">
+                <P>Home</P>
+            </div>
+            <div class="course">
+                <p>Courses</p>
+            </div>
+            <div class="page">
+                <p>Page</p>
+            </div>
+            <div class="event">
+                <p>Event</p>
+            </div>
+            <div class="contact">
+                <p>Contact</p>
+            </div>
+        </div>
+        <div class="icon">
+            <iconify-icon icon="mingcute:menu-fill" height="3vh" width="3vw" style="color: black" onclick="change()"></iconify-icon>
+        </div>
+    </div>
+    <div id="sub-nav-2">
+        <div class="home-2">
+            <P>Home</P>
+        </div>
+        <div class="course-2">
+            <p>Courses</p>
+        </div>
+        <div class="page-2">
+            <p>Page</p>
+        </div>
+        <div class="event-2">
+            <p>Event</p>
+        </div>
+        <div class="contact-2">
+            <p>Contact</p>
+        </div>
+    </div>
+    <script>
+        function change(){
+            document.getElementById("sub-nav-2").style.display="flex";
+            document.getElementById("sub-nav-2").style.display="block";
+            document.getElementById("sub-nav-2").style.alignItems="center";
+            document.getElementById("sub-nav-2").style.justifyContent="center";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            height: 1500px;
+            width: 1000px;
+            border-style: double;
+            background: rgb(231, 231, 231);
+        }
+        .nav{
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .nav img{
+            border-radius: 50%;
+        }
+        .head{
+            margin-left: 150px;
+            margin-right: 150px;
+            font-family: 'Inter',sans-serif;
+            margin-bottom: 20px;
+            color: rgb(11 23 104);
+        }
+        .head h1{
+            font-size: 25px;
+            margin-left: 90px;
+            margin-top: 25px;
+        }
+        .head h2{
+            font-size: 30px;
+            margin-top: -10px;
+        }
+        .head-2{
+            font-family: 'Inter',sans-serif;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color: rgb(11 23 104);
+        }
+        .head-2 h1{
+            font-weight: bolder;
+            letter-spacing: 1px;
+            word-spacing: 10px;
+            font-size: 30px;
+        }
+        .head-2 h2{
+            font-weight: bolder;
+            font-size: 35px;
+            margin-top: -10px;
+        }
+        .notes{
+            font-family: 'Poppins',sans-serif;
+            color: rgb(11 23 104);
+            margin-left: 50px;
+        }
+        .p1{
+            display: flex;
+            flex-direction: row;
+        }
+        .details{
+            height: 40px;
+            width: 700px;
+            margin-top: -23px;
+            margin-left: 5px;
+            border-bottom:  0.5px solid gray;
+            word-spacing: 5px;
+        }
+        .details p{
+            margin-left: 100px;
+            font-weight: 600;
+        }
+        .p2{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+        .details-1{
+            height: 40px;
+            width: 793px;
+            margin-top: -23px;
+            margin-left: 5px;
+            border-bottom: 0.5px solid gray;
+            word-spacing: 5px;
+        }
+        .details-1 p{
+            margin-left: 100px;
+            font-weight: 600;
+        }
+        .p3{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+        .details-2{
+            height: 40px;
+            width: 500px;
+            margin-top: -23px;
+            margin-left: 5px;
+            border-bottom:0.5px solid gray;
+            word-spacing: 5px;
+            margin-right: 10px;
+        }
+        .details-2 p{
+            margin-left: 50px;
+            font-weight: 600;
+        }
+        .details-3{
+            height: 40px;
+            width: 260px;
+            margin-top: -23px;
+            margin-left: 5px;
+            border-bottom: 0.5px solid gray;
+            word-spacing: 5px;
+            margin-right: 10px;
+        }
+        .details-3 p{
+            margin-left: 50px;
+            font-weight: 600;
+        }
+        .p4{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+        .details-4{
+            height: 40px;
+            width: 880px;
+            margin-top: -23px;
+            margin-left: 5px;
+            border-bottom:  0.5px solid gray;
+            word-spacing: 5px;
+            margin-right: 10px;
+        }
+        .details-4 p{
+            margin-left: 50px;
+            font-weight: 600;
+        }
+        .p5{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+        .details-5{
+            height: 40px;
+            width: 505px;
+            margin-top: -23px;
+            margin-left: 5px;
+            border-bottom: 0.5px solid gray;
+            word-spacing: 5px;
+            margin-right: 10px;
+        }
+        .details-5 p{
+            margin-left: 50px;
+            font-weight: 600;
+        }
+        table,th{
+            border: 2px solid gray;
+            border-collapse: collapse;
+        }
+        table{
+            height: 500px;
+            width: 1000px;
+            margin-top:20px;
+        }
+        td{
+            border-right: 2px solid gray;
+            color: rgb(11 23 104);
+        }
+        th{
+            font-family: 'Inter',sans-serif;
+            color: rgb(11 23 104);
+            background: rgb(201, 240, 228);
+        }
+        .subject{
+            height: 40px;
+            width: 400px;
+        }
+        .serial{
+            height: 50px;
+            width: 10px;
+            text-align: center;
+        }
+        .serial p{
+            transform: rotate(270deg);
+        }
+        .credit{
+            height: 50px;
+            width: 10px;
+            text-align: center;
+        }
+        .credit p{
+            height: 40px;
+            width: 50px;
+            transform: rotate(270deg);
+        }
+        .obtain{
+            height: 30px;
+            width: 100px;
+        }
+        .final{
+            height: 50px;
+            width: 10px;
+            text-align: center;
+        }
+        .final p{
+            height: 40px;
+            width: 50px;
+            transform: rotate(270deg);
+        }
+        .grade{
+            height: 50px;
+            width: 10px;
+            text-align: center;
+        }
+        .grade p{
+            height: 40px;
+            width: 50px;
+            transform: rotate(270deg);
+        }
+        .remarks{
+            height: 40px;
+            width: 10px;
+            text-align: center;
+        }
+        .remarks p{
+            transform: rotate(270deg);
+        }
+        .theory{
+            height: 30px;
+            width: 50px;
+            text-align: center;
+        }
+        .pract{
+            height: 30px;
+            width: 50px;
+            text-align: center;
+        }
+        .gpa{
+            height: 50px;
+            width: 1000px;
+            border-bottom: 2px solid gray;
+            background: rgb(201, 240, 228);
+            display: flex;
+            justify-content: center;
+        }
+        .gpa p{
+            margin-left: 600px;
+        }
+        .sub{
+            padding-left: 20px;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+        }
+        .jpt{
+            height: 250px;
+            width: 400px;
+            margin-top: 30px;
+            margin-left: 20px;
+            color: rgb(11 23 104);
+            word-spacing: 5px;
+        }
+        .n2{
+            margin-top: -10px;
+        }
+        .n3{
+            margin-top: -10px;
+        }
+        .n4{
+            margin-top: -10px;
+        }
+        .n4 p{
+            margin-left: 22px;
+            word-spacing: 10px;
+        }
+        .n5{
+            margin-left: 23px;
+            word-spacing: 10px;
+            margin-top: -10px;
+        }
+        .n6{
+            margin-left: 28px;
+            word-spacing: 13px;
+            margin-top: -10px;
+        }
+        .n7{
+            margin-left: 75px;
+            margin-top: -10px;
+        }
+        .check{
+            margin-left: 20px;
+            color: rgb(11 23 104);
+            font-family: 'Inter',sans-serif;
+        }
+        .o1{
+            margin-top: 20px;
+            margin-bottom: -10px;
+        }
+        .o2 h2{
+            font-size: 20px;
+        }
+        .o3{
+            margin-top: -10px;
+        }
+        .main{
+            display: flex;
+            flex-direction: row;
+        }
+        .sign{
+            color: rgb(11 23 104);
+            font-family: 'Inter',sans-serif;
+            font-weight: 600;
+            margin-left: 250px;
+            margin-top: 75px;
+            border-top: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <img src="./img/download.jpg" height="100px" width="100px" class="main">
+            <div class="head">
+                <h1>GOVERNMENT OF NEPAL</h1>
+                <h2>NATIONAL EXAMINATION BOARD</h2>
+            </div>
+            <img src="./img/neb_logo.jpg" height="100px" width="100px" class="normal">
+        </div>
+        <div class="head-2">
+            <h1>SCHOOL LEAVING CERTIFICATE, GRADE-12</h1>
+            <h2>GRADE-SHEET</h2>
+        </div>
+        <div class="notes">
+            <div class="p1">THE GRADE(S) SECURED BY
+                <div class="details">
+                    <p>NERISH SHRISH</p>
+                </div>
+            </div>
+            <div class="p2">DATE OF BIRTH
+                <div class="details-1">
+                    <p>2062/04/02 BS (17-Jul-2005 AD)</p>
+                </div>
+            </div> 
+            <div class="p3">ROLL
+                <div class="details-2">
+                    <p>RUPANDEHI</p>
+                </div>
+                SYMBOL NO.
+                <div class="details-3">
+                    <p>24900709</p>
+                </div>
+            </div>
+            <div class="p4">OF 
+                <div class="details-4">
+                    <p>TILOTTAMA CAMPUS, YOGIKUTI</p>
+                </div>
+            </div>
+            <div class="p5">IN THE ANNUAL SLC, GRADE-12 OF 
+                <div class="details-5">
+                    <p>2080 (2023 AD)</p>
+                </div>
+            ARE GIVEN BELOW:</div>
+        </div>
+        <table>
+            <tr>
+                <th class="serial" rowspan="2"><p>SERIAL <br>NUMBER</p></th>
+                <th class="subject" rowspan="2"><p>SUBJECTS</p></th>
+                <th class="credit" rowspan="2"><p>CREDIT HOUR</p></th>
+                <th colspan="2" class="obtain"><p>OBTAINED <br> GRADE</p></th>
+                <th class="final" rowspan="2"><p>FINAL GRADE</p></th>
+                <th class="grade" rowspan="2"><p>GRADE POINT</p></th>
+                <th class="remarks" rowspan="2"><p>REMARKS</p></th>
+            </tr>
+            <tr>
+                <th class="theory">TH</th>
+                <th class="pract">PR</th>
+            </tr>
+            <tr>
+                <td class="serial">1.</td>
+                <td class="sub">COMP. ENGLISH</td>
+                <td class="credit">4</td>
+                <td class="theory">B</td>
+                <td class="pract">A+</td>
+                <td class="final">B+</td>
+                <td class="grade">3.2</td>
+            </tr>
+            <tr>
+                <td class="serial">2.</td>
+                <td  class="sub">COMP. NEPALI</td>
+                <td  class="credit">3</td>
+                <td class="theory">B</td>
+                <td class="pract">A+</td>
+                <td class="final">B+</td>
+                <td class="grade">3.2</td>
+            </tr>
+            <tr>
+                <td class="serial">3.</td>
+                <td  class="sub">COMP. MATHEMATICS</td>
+                <td  class="credit">5</td>
+                <td class="theory">B+</td>
+                <td class="pract">A+</td>
+                <td class="final">A</td>
+                <td class="grade">3.6</td>
+            </tr>
+            <tr>
+                <td class="serial">4.</td>
+                <td  class="sub">PHYSICS</td>
+                <td  class="credit">5</td>
+                <td class="theory">B</td>
+                <td class="pract">A+</td>
+                <td class="final">B+</td>
+                <td class="grade">3.2</td>
+            </tr>
+            <tr>
+                <td class="serial">5.</td>
+                <td  class="sub">CHEMISTRY</td>
+                <td  class="credit">5</td>
+                <td class="theory">B</td>
+                <td class="pract">A+</td>
+                <td class="final">B+</td>
+                <td class="grade">3.2</td>
+            </tr>
+            <tr>
+                <td class="serial">6.</td>
+                <td  class="sub">COMPUTER SCIENCE</td>
+                <td  class="credit">5</td>
+                <td class="theory">A</td>
+                <td class="pract">A+</td>
+                <td class="final">A+</td>
+                <td class="grade">4.0</td>
+            </tr>
+        </table>
+        <div class="gpa">
+            <p>GRADE POINT AVERAGE (GPA) : 3.28</p>
+        </div>
+        <div class="content">
+            <div class="jpt">
+                <div class="n1"><p>1. One Credit Hour equals 32 Clock Hours</p></div>
+                <div class="n2"><p>2. TH : Theory, PR : Practical</p></div>
+                <div class="n3"><p>3. *@ : Absent</p></div>
+                <div class="n4"><p>*T : Theory Grade Missing</p></div>
+                <div class="n5"><p>*P : Practical Grade Missing</p></div>
+                <div class="n6"><p># : Subject(s) appeared in the</p></div>
+                <div class="n7"><p>Supplementry Examination</p></div>
+            </div>
+            <div class="main">
+            <div class="check">
+                <div class="o1">CHECKED BY</div>
+                <div class="02"><h2>NEB, SANOTHIMI, BHAKTAPUR, NEPAL</h2></div>
+                <div class="o3">DATE OF ISSUE : 16-JUNE-2023</div>
+            </div>
+            <div class="sign">CONTROLLER OF EXAMINATION</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

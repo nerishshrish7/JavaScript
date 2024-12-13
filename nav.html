@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .mystyle{
+            height: 40vh;
+            width: 100vw;
+            color:rgb(32, 32, 32);
+            font-size: 3vw;
+            display: flex;
+            color: white;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color:pink;
+            border-top: 1px solid white;
+            transition: 2s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class=" h-[12vh] w-[100%] bg-pink-400 flex items-center justify-center gap-[25%] text-white max-sm: ">
+        <div class="h-[12vh] w-[8%] flex items-center justify-center text-[2.5vw] max-sm:justify-around pr-36 bg-black">
+            LOGO
+        </div>
+        <div class="h-[12vh] w-[35%] flex items-center justify-center gap-[5%] text-[1.5vw] max-sm:hidden">
+            <div class="h-[12vh] w-[8vw] flex items-center justify-center">Home</div>
+            <div class="h-[12vh] w-[8vw] flex items-center justify-center">About</div>
+            <div class="h-[12vh] w-[8vw] flex items-center justify-center">Contact</div>
+            <div class="h-[12vh] w-[8vw] flex items-center justify-center">Gallery</div>
+            <div class="h-[12vh] w-[8vw] flex items-center justify-center">Blog</div>
+        </div>
+        <iconify-icon icon="mingcute:menu-fill" height="5vh" width="5vw" style="color: white" class="transition duration-1000 ease-in hidden max-sm:block" onclick="change()"></iconify-icon>
+    </div>
+    <div id="sub-nav-2" class="h-[30vh] w-[35%] flex flex-col items-center justify-center gap-[5%] text-[1.5vw] bg-pink-400 hidden">
+        <div class="h-[7vh] w-[100%] flex items-center justify-center">Home</div>
+        <div class="h-[7vh] w-[100%] flex items-center justify-center">About</div>
+        <div class="h-[7vh] w-[100%] flex items-center justify-center">Contact</div>
+        <div class="h-[7vh] w-[100%] flex items-center justify-center">Gallery</div>
+        <div class="h-[7vh] w-[100%] flex items-center justify-center">Blog</div>
+    </div>
+    <script>
+        function change(){
+            var element = document.getElementById("sub-nav-2");
+            element.classList.toggle("mystyle");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ISO2</th>
+                <th>ISO3</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody id="tableRows">
+
+        </tbody>
+    </table>
+    <script>
+        fetch('https://countriesnow.space/api/v0.1/countries/')
+  .then(response => response.json())
+  .then((res)=>{
+    const data=res.countries;
+    let rows="";
+    data.forEach(countries => {
+        rows += `<tr><td>${countries.iso2}</td><td>${countries.iso3}</td><td>${countries.country}</td></tr>`;
+    });
+    document.getElementById('tableRows').innerHTML= rows;
+  })
+  .catch(error => {
+    console.log('There was a problem with the fetch operation:', error);
+  })
+    </script>
+</body>
+</html>

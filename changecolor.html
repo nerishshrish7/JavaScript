@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .current-class{
+            height: 50vh;
+            width: 30%;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="current-class"></div>
+    <button onclick="change()"></button>
+<script>
+ function change(){
+let currentClass = document.querySelector('.current-class');
+if (currentClass) {
+  currentClass.style.background = '#0097fd';
+}
+}
+</script>
+</body>
+</html>

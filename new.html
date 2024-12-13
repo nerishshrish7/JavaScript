@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <input type="text" id="name" placeholder="Enter Name">
+        <button id="button" onclick="display()">Submit</button>
+
+    <script>
+        const name=[];
+        function display(){
+            const username=document.getElementById('name').value;
+            var input= prompt('Do you want to continue?');
+            if (input=='yes'){
+                var n;
+                for( var i=0; i<=n; i++){
+                    const username=document.getElementById('name').value;
+                    var input= prompt('Do you want to continue?');
+                    if (input=='yes'){
+                        n++;
+                        name.push(username);
+                    }
+                    else{
+                        name.push(username);
+                        console.log(name);
+                    }
+                }
+            }
+            else{
+                name.push(username);
+                console.log(name);
+            }
+        }
+    </script>
+</body>
+</html>

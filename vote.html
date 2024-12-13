@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote</title>
+    <link rel="stylesheet" href="vote.css">
+</head>
+<body>
+    <div class="div">
+        <p>Is your age above 18?</p>
+        <div class="button">
+            <button onclick="check('1')"> Yes </button>
+            <button onclick="check('2')"> No </button>
+        </div>
+        <div id="demo"></div>
+        <script src="./vote.js">
+            function check(b){
+                var a;
+if (b=='1'){
+    a="You're eligible for voting.";
+}
+else
+{
+    a="You're not eligible for voting ";
+// console.log(a)
+// document.getElementById('demo').style.backgroundColor='pink';
+// document.getElementById('').innerHTML=a;
+}
+document.getElementById("demo").innerHTML=a;
+}
+        </script>
+    </div>
+</body>
+</html>

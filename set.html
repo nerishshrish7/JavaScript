@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #no{
+            height: 8vh;
+            width: 16vw;
+            background: red;
+        }
+    </style>
+
+</head>
+<body>
+<button id="no" onclick="myFunction()" onclick="colorchange()">Try it</button>
+<script>
+function myFunction() {
+    let timeout=null;
+    console.log(timeout);
+    if(timeout){
+        timeout = setTimeout(alertFunc);
+        function alertFunc(){
+            document.getElementById('no').style.backgroundColor='pink';
+        }
+    }
+    else{
+        timeout = setTimeout(alertFunc);
+        function alertFunc(){
+            document.getElementById('no').style.backgroundColor='blue';
+        }
+    }
+}   
+function colorchange(){
+    document.getElementById('no').style.background='red';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #main-display{
+            height: auto;
+            width: 90%;
+            border-radius: 5px;
+            margin-top: 5vh;
+            background: bisque;
+        }
+        #details{
+            height: 10vh;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .mystyle{
+            width: 20%;
+            background: aqua;
+            padding-left: 2vw;
+            padding-top: 3vh;
+            display: flex;
+        }
+        #input{
+            height: 5vh;
+            width: 15vw;
+            padding-left: 1vw;
+            outline: none;
+        }
+        button{
+            height: 6vh;
+            width: 7vw;
+            margin-left: 2vw;
+            margin-right: 5vw;
+        }
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div id="details">
+        <input type="text" placeholder="Enter any number" id="input">
+        <button onclick="myFunction()">Click</button>
+    </div>
+    <div id="container">
+        <div id="main-display">
+            <div id="display"></div>
+        </div>
+    </div>
+    <script>
+        function myFunction(){
+            fetch('https://countriesnow.space/api/v0.1/countries/')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(random => {
+            console.log('Data received:', random);
+            const newdata= random.data;
+            const input=document.getElementById('input');
+            var n=input.value;
+            for(i=0; i<n ; i++){
+                document.getElementById('display').innerHTML += newdata[i].country.toUpperCase()+ "<br>"+ "<br>" + newdata[i].cities.join("<br>") + "<br>" + "<br>" + "<br>";
+                document.getElementById('display').classList.add("mystyle");
+            }
+        })
+        .catch(error => {
+            console.log('There was a problem with the fetch operation:', error);
+        })
+        }
+    </script>
+</body>
+</html>

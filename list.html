@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 5%;
+            box-sizing: border-box;
+        }
+        input{
+            height: 6vh;
+            width: 10vw;
+            padding-left: 0.5vw;
+            outline: none;
+        }
+        .button{
+            width: 25vw;
+            margin-top: 5vh;
+            margin-left: 40%;
+        }
+        button{
+            height: 7vh;
+            width: 11vw;
+        }
+        .form{
+            height: 20vh;
+            width: 40%;
+            background: bisque;
+            gap: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-left: 30%;
+        }
+        table{
+            width: 60%;
+            margin-left: 20%;
+            margin-top: 10vh;
+        }
+        .display{
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            margin-top: 1%;
+            padding-left: 15%;
+            gap: 1%;
+        }
+        #dname{
+            width: 15vw;
+            height: 5vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #dphone{
+            width: 15vw;
+            height: 5vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #dmail{
+            width: 15vw;
+            height: 5vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #daddress{
+            width: 15vw;
+            height: 5vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #dgpa{
+            width: 15vw;
+            height: 5vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #dage{
+            width: 15vw;
+            height: 5vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .head{
+            height: 10vh;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            padding-left: 15%;
+            gap: 1%;
+        }
+        .head h1,h2,h3,h4,h5,h6{
+            font-size: 1vw;
+            width: 15vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <input type="text" id="name" placeholder="Your name">
+        <input type="text" id="phone" placeholder="Contact No.">
+        <input type="email" id="mail" placeholder="Your email">
+        <input type="text" id="address" placeholder="Address">
+        <input type="text" id="gpa" placeholder="Your GPA">
+        <input type="text" id="age" placeholder="Age">
+    </div>
+
+    <div class="button">
+        <button onclick="display()">Add</button>
+        <button onclick="hide()">Remove</button>
+    </div>
+    
+    <div class="head">
+        <h1>NAME</h1>
+        <h2>CONTACT</h2>
+        <h3>EMAIL</h3>
+        <h4>ADDRESS</h4>
+        <h5>GPA</h5>
+        <h6>AGE</h6>
+    </div>
+
+    <div class="display">
+        <div id="dname"></div>
+        <div id="dphone"></div>
+        <div id="dmail"></div>
+        <div id="daddress"></div>
+        <div id="dgpa"></div>
+        <div id="dage"></div>
+    </div>
+
+    <script>
+        const username=[];
+        const phone=[];
+        const mail=[];
+        const add=[];
+        const marks=[];
+        const old=[];
+
+        function display(){
+            var name=document.getElementById('name').value;
+            var contact=document.getElementById('phone').value;
+            var email=document.getElementById('mail').value;
+            var address=document.getElementById('address').value;
+            var gpa=document.getElementById('gpa').value;
+            var age=document.getElementById('age').value;
+
+            username.push(name);
+            phone.push(contact);
+            mail.push(email);
+            add.push(address);
+            marks.push(gpa);
+            old.push(age);
+
+            var displayName="";
+            var displayContact="";
+            var displayEmail="";
+            var displayAddress="";
+            var displayGpa="";
+            var displayAge="";
+            
+            for(i=0; i<username.length; i++){
+                displayName=displayName + username[i] + "<br>";
+            }
+            for(i=0; i<phone.length; i++){
+                displayContact=displayContact + phone[i] + "<br>";
+            }
+            for(i=0; i<mail.length; i++){
+                displayEmail=displayEmail + mail[i] + "<br>";
+            }
+            for(i=0; i<add.length; i++){
+                displayAddress=displayAddress + add[i] + "<br>";
+            }
+            for(i=0; i<marks.length; i++){
+                displayGpa=displayGpa + marks[i] + "<br>";
+            }
+            for(i=0; i<old.length; i++){
+                displayAge=displayAge + old[i] + "<br>";
+            }
+            document.getElementById('dname').innerHTML=displayName;
+            document.getElementById('dphone').innerHTML=displayContact;
+            document.getElementById('dmail').innerHTML=displayEmail;
+            document.getElementById('daddress').innerHTML=displayAddress;
+            document.getElementById('dgpa').innerHTML=displayGpa;
+            document.getElementById('dage').innerHTML=displayAge;
+        }
+        function hide(){
+            username.pop();
+            phone.pop();
+            mail.pop();
+            add.pop();
+            marks.pop();
+            old.pop();
+
+            var displayName="";
+            var displayContact="";
+            var displayEmail="";
+            var displayAddress="";
+            var displayGpa="";
+            var displayAge="";
+            
+            for(i=0; i<username.length; i++){
+                displayName=displayName + username[i] + "<br>";
+            }
+            for(i=0; i<phone.length; i++){
+                displayContact=displayContact + phone[i] + "<br>";
+            }
+            for(i=0; i<mail.length; i++){
+                displayEmail=displayEmail + mail[i] + "<br>";
+            }
+            for(i=0; i<add.length; i++){
+                displayAddress=displayAddress + add[i] + "<br>";
+            }
+            for(i=0; i<marks.length; i++){
+                displayGpa=displayGpa + marks[i] + "<br>";
+            }
+            for(i=0; i<old.length; i++){
+                displayAge=displayAge + old[i] + "<br>";
+            }
+            document.getElementById('dname').innerHTML=displayName;
+            document.getElementById('dphone').innerHTML=displayContact;
+            document.getElementById('dmail').innerHTML=displayEmail;
+            document.getElementById('daddress').innerHTML=displayAddress;
+            document.getElementById('dgpa').innerHTML=displayGpa;
+            document.getElementById('dage').innerHTML=displayAge;
+        }
+    </script>
+</body>
+</html>

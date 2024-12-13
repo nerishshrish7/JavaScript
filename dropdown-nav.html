@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+        .navbar{
+            height: 12vh;
+            width: 100%;
+            background: pink;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20%;
+        }
+        .logo{
+            height: 12vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3vw;    
+        }
+        #sub-nav{
+            height: 12vh;
+            width: 50vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            color: white;
+            font-size: 1.5vw;    
+            gap: 3%;
+            font-family: 'Poppins',sans-serif;
+        }
+        #sub-nav li{
+            height: 12vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #sub-nav-2 li{
+            height: 12vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon{
+            height: 12vh;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        #sub-nav-2{
+            color: white;
+            font-family: 'Poppins',sans-serif;
+        }
+        .mystyle{
+            height: 40vh;
+            width: 100vw;
+            color:rgb(32, 32, 32);
+            font-size: 3vw;
+            display: flex;
+            color: white;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            border-top: 1px solid white;
+            transition: 1s ease-in;
+        }
+        @media (max-width:600px){
+            .navbar{
+                display: flex;
+                flex-direction: row;
+                gap: 50%;
+                justify-content: center;
+                align-items: center;
+            }
+            #sub-nav{
+                display: none;
+            }
+            .icon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @media(min-width:601px){
+            #sub-nav-2{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <p>LOGO</p>
+        </div>
+        <div id="sub-nav">
+            <li>Home</li>
+            <li>Courses</li>
+            <li>Page</li>
+            <li>Event</li>
+            <li>Contact</li>
+        </div>
+        <div class="icon">
+            <iconify-icon icon="mingcute:menu-fill" height="3vh" width="3vw" style="color: white" onclick="change()"></iconify-icon>
+        </div>
+    </div>
+    <div id="sub-nav-2">
+        <li>Home</li>
+        <li>Courses</li>
+        <li>Page</li>
+        <li>Event</li>
+        <li>Contact</li>
+    </div>
+    <script>
+        function change(){
+            var element = document.getElementById("sub-nav-2");
+            element.classList.toggle("mystyle");
+        }
+    </script>
+</body>
+</html>

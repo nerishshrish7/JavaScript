@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button id="button" onclick="pushData()">Submit</button>
+
+    <p id="name"></p>
+
+    <script>
+        const name=[];
+        function pushData(){
+            var username=document.getElementById('input').value;
+            name.push(username);
+
+            var display="";
+            
+            for(i=0; i<name.length; i++){
+                display=display + name[i] + "<br>";
+            }
+            document.getElementById('name').innerHTML=display;
+        }
+    </script>
+</body>
+</html>

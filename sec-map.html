@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #nav{
+            display: flex;
+            gap: 10%;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            width: 100%;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <ul id="nav"></ul>
+    <script>
+        const navList = document.getElementById('nav');
+        const myNavigationItems = ['Home', 'Contact', 'Services','Menu'];
+        const listItems = myNavigationItems.map(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            return li;
+        });
+        listItems.forEach(li => {
+            navList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
